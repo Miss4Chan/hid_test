@@ -65,8 +65,6 @@ class CategoryAdmin(admin.ModelAdmin):
         return super().has_change_permission(request, obj)
     def has_view_permission(self, request: HttpRequest, obj: Any | None = ...) -> bool:
         return super().has_view_permission(request, obj)
-    class Meta:
-        verbose_name_plural = "Categories"
 
 class SaleAdmin(admin.ModelAdmin):
     list_display = ['product', 'client']
